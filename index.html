@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Factura</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .stamp {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1050;
+      background-color: rgba(255, 0, 0, 0.3);
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid mt-4">
+    <!-- Encabezado -->
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Company S.A.</h2>
+        <!-- Logo de factura -->
+        <div class="position-relative">
+        <img src="https://th.bing.com/th/id/R.7658fddaecdd838a859c4730d1f784ed?rik=Ww7jXATRvVJgQQ&pid=ImgRaw&r=0" alt="Logo" class="position-absolute top-0 start-0 z-3" style="width: 90px; height: auto;">
+        </div>
+      </div>
+      <div class="col-md-6 text-end">
+        <p><strong>Factura N°:</strong> 0002234</p>
+        <p><strong>Fecha:</strong> 2025-05-16</p>
+      </div>
+    </div>
+
+    <!-- Información del cliente -->
+    <div class="row mt-4">
+      <div class="col-sm-12 col-md-6">
+        <h5>Cliente:</h5>
+        <p>Juan Pérez<br>Av. Siempre Viva 123<br>Ciudad Ejemplo</p>
+      </div>
+    </div>
+
+    <!-- Tabla de productos -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th>Cant.</th>
+              <th>Descripción</th>
+              <th>Precio Unitario</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Producto A</td>
+              <td>$50.00</td>
+              <td>$100.00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Servicio B</td>
+              <td>$80.00</td>
+              <td>$80.00</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-end">Subtotal</td>
+              <td>$180.00</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-end">IVA 12%</td>
+              <td>$21.60</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-end"><b>Total</b></td>
+              <td><b>$201.60</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Observaciones -->
+    <div class="row">
+      <div class="col-md-12">
+        <p class="fst-italic mt-3">Nota: Gracias por su compra. Factura válida por 30 días habiles</p>
+      </div>
+    </div>
+
+    <!-- Sello de pagado -->
+    <div class="stamp z-3 text-danger">
+      PAGADO
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
