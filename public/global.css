@@ -1,0 +1,66 @@
+/* Estilos general */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #c5c5c7;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-weight: bold;
+  color: #111301; 
+}
+
+/* Tabla de datos del cliente */
+.table-client {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.table-client th,
+.table-client td {
+  border: 1px solid #111111;
+  padding: 8px 12px;
+}
+
+.table-client th {
+  background-color: #a29cec;
+  text-align: left;
+  width: 30%;
+}
+
+/* Tabla de productos */
+.table-products {
+  margin-top: 15px;
+  background-color: #010b14; 
+  border-collapse: collapse;
+}
+
+.table-products th,
+.table-products td {
+  border: 1px solid #16075a;
+  padding: 8px 12px;
+}
+
+/* Observaciones */
+.fst-italic {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Sello "PAGADO" */
+.stamp {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1050;
+  background-color: rgba(231, 43, 43, 0.3);
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #ec2424; 
+  border-radius: 5px;
+  user-select: none;
+}
+
+

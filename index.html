@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Factura</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="public/global.css" />
   <style>
     .stamp {
       position: absolute;
@@ -14,19 +15,24 @@
       background-color: rgba(255, 0, 0, 0.3);
       padding: 5px 10px;
       font-weight: bold;
+      color: #dc3545;
+      border-radius: 5px;
+      user-select: none;
     }
   </style>
 </head>
 <body>
-
   <div class="container-fluid mt-4">
-    <!-- Encabezado -->
     <div class="row">
       <div class="col-md-6">
         <h2>Company S.A.</h2>
-        <!-- Logo de factura -->
         <div class="position-relative">
-        <img src="https://th.bing.com/th/id/R.7658fddaecdd838a859c4730d1f784ed?rik=Ww7jXATRvVJgQQ&pid=ImgRaw&r=0" alt="Logo" class="position-absolute top-0 start-0 z-3" style="width: 90px; height: auto;">
+          <img
+            src="https://th.bing.com/th/id/R.7658fddaecdd838a859c4730d1f784ed?rik=Ww7jXATRvVJgQQ&pid=ImgRaw&r=0"
+            alt="Logo"
+            class="position-absolute top-0 start-0 z-3"
+            style="width: 90px; height: auto;"
+          />
         </div>
       </div>
       <div class="col-md-6 text-end">
@@ -37,16 +43,31 @@
 
     <!-- Información del cliente -->
     <div class="row mt-4">
-      <div class="col-sm-12 col-md-6">
-        <h5>Cliente:</h5>
-        <p>Juan Pérez<br>Av. Siempre Viva 123<br>Ciudad Ejemplo</p>
+      <div class="col-md-6">
+        <h5>Datos del Cliente</h5>
+        <table class="table table-sm table-borderless table-client">
+          <tbody>
+            <tr>
+              <th scope="row">Nombre:</th>
+              <td>Juan Quinteros</td>
+            </tr>
+            <tr>
+              <th scope="row">Dirección:</th>
+              <td>Av. Occidental e Ignasio Asín</td>
+            </tr>
+            <tr>
+              <th scope="row">Ciudad:</th>
+              <td>Quito</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
     <!-- Tabla de productos -->
     <div class="row mt-3">
       <div class="col-12">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-products">
           <thead class="table-light">
             <tr>
               <th>Cant.</th>
@@ -58,13 +79,13 @@
           <tbody>
             <tr>
               <td>2</td>
-              <td>Producto A</td>
+              <td>Teclado Red Dragon Kumara</td>
               <td>$50.00</td>
               <td>$100.00</td>
             </tr>
             <tr>
               <td>1</td>
-              <td>Servicio B</td>
+              <td>Mouse Logitec Superligt</td>
               <td>$80.00</td>
               <td>$80.00</td>
             </tr>
@@ -88,18 +109,14 @@
     <!-- Observaciones -->
     <div class="row">
       <div class="col-md-12">
-        <p class="fst-italic mt-3">Nota: Gracias por su compra. Factura válida por 30 días habiles</p>
+        <p class="fst-italic mt-3">Nota: Gracias por su compra. Factura válida por 30 días hábiles.</p>
       </div>
     </div>
 
     <!-- Sello de pagado -->
-    <div class="stamp z-3 text-danger">
-      PAGADO
-    </div>
+    <div class="stamp z-3 text-danger">PAGADO</div>
   </div>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
